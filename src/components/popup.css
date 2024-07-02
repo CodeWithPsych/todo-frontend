@@ -1,0 +1,24 @@
+.popUpItems {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popUp {
+  z-index: 3;
+  padding: 15px;
+  width: 20rem;
+  flex-direction: column;
+  border: 2px solid transparent;
+  border-radius: 22px;
+  background-color: gray;
+  color: white;
+}
+.popUp button {
+  margin: 13px 0;
+}

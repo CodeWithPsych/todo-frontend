@@ -1,0 +1,132 @@
+.row {
+  width: 70vw;
+  margin-bottom: 50px;
+}
+
+.list-none {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo-item {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #27272a;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.todo-text {
+  color: #ffffff;
+}
+
+.todo-text {
+  font-size: 20px;
+}
+.no-todos {
+  font-size: 30px;
+  display: flex;
+  color: #ff0b13;
+  justify-content: center;
+}
+
+@media screen and (max-width: 500px) {
+  .todo-item {
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    align-items: start;
+  }
+  .todo-text {
+    padding: 8px 0;
+  }
+}
+
+/* buttons  */
+
+.buttons {
+  display: flex;
+  gap: 12px;
+}
+.custom {
+  width: 65px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+.editBtn {
+  border: none;
+  background: #3e3eff;
+  background: linear-gradient(0deg, #0606ff 0%, #0b0b96 100%);
+  color: #fff;
+  overflow: hidden;
+}
+.deleteBtn {
+  border: none;
+  background: #ef4444;
+  background: linear-gradient(0deg, #ff0000 0%, #860408 100%);
+  color: #fff;
+  overflow: hidden;
+}
+.editBtn:hover,
+.deleteBtn :hover {
+  text-decoration: none;
+  color: #fff;
+}
+.editBtn:before,
+.deleteBtn :before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  top: -180px;
+  left: 0;
+  width: 30px;
+  height: 100%;
+  background-color: #fff;
+  animation: shiny-btn1 3s ease-in-out infinite;
+}
+.editBtn:hover,
+.deleteBtn :hover {
+  opacity: 0.7;
+}
+.editBtn :active,
+.deleteBtn:active {
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3),
+    -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+}
+@keyframes shiny-btn1 {
+  0% {
+    transform: scale(0) rotate(45deg);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(0) rotate(45deg);
+    opacity: 0.5;
+  }
+  81% {
+    transform: scale(4) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(50) rotate(45deg);
+    opacity: 0;
+  }
+}

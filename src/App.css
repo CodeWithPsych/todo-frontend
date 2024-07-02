@@ -1,0 +1,16 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+.heading h3{
+  width: 70vw;
+}
