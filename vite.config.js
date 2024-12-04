@@ -7,7 +7,7 @@ export default defineConfig({
     port: 3006,
     proxy: {
       '/api/': {
-        target: 'http://localhost:7000',
+        target: 'https://codewithpsychtodobackend.netlify.app/',
         rewrite: (path) => path.replace(/^\/api/, '/api'),
       },
     },
