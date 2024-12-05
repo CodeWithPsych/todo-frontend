@@ -3,27 +3,19 @@ import axios from "axios";
 import toast from "react-hot-toast";
 
 export const fetchTodos = createAsyncThunk("todos/fetchTodos", async () => {
-  try {
-    const response = await axios.get("/api/getTodos");
+    const response = await axios.get("https://todo-backend-gold-eight.vercel.app/api/getTodos");
     return response.data.todos;
-  } catch (error) {
-    throw error;
-  }
 });
 
 export const deleteTodo = createAsyncThunk("todos/deleteTodo", async (id) => {
-  try {
-    const response = await axios.delete(`/api/deletetodo/${id}`);
+    const response = await axios.delete(`https://todo-backend-gold-eight.vercel.app/api/deletetodo/${id}`);
     return response.data;
-  } catch (error) {
-    throw error;
-  }
 });
 
 export const newTodo = createAsyncThunk("todos/newTodo", async (todo) => {
-  try {
+
     const response = await axios.post(
-      "/api/addtodo/",
+      "https://todo-backend-gold-eight.vercel.app/api/addtodo/",
       { todo },
       {
         headers: {
@@ -32,15 +24,11 @@ export const newTodo = createAsyncThunk("todos/newTodo", async (todo) => {
       }
     );
     return response.data;
-  } catch (error) {
-    throw error;
-  }
 });
 
 export const editTodo = createAsyncThunk("todos/editTodo", async ({ id, todo }) => {
-  try {
     const response = await axios.patch(
-      `/api/updatetodo/${id}`,
+      `https://todo-backend-gold-eight.vercel.app/api/updatetodo/${id}`,
       { todo },
       {
         headers: {
@@ -49,9 +37,6 @@ export const editTodo = createAsyncThunk("todos/editTodo", async ({ id, todo }) 
       }
     );
     return response.data;
-  } catch (error) {
-    throw error;
-  }
 });
 
 const initialState = {
